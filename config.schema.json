@@ -10,12 +10,18 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Blu-ray player"
+        "default": "BluRay Player"
       },
       "host": {
         "title": "IP Address",
         "type": "string",
         "required": true
+      },
+      "pollInterval": {
+        "title": "Polling Interval (ms)",
+        "type": "number",
+        "required": false,
+        "default": 500
       }
     }
   }

@@ -25,9 +25,10 @@ export class PanasonicPlatformAccessory {
 
     this.device = new PanasonicBD(this.accessory.context.device.host);
 
+    const pollInterval = this.platform.config.pollInterval || 500;
     setInterval(() => {
       this.updateStatus();
-    }, 30000);
+    }, pollInterval);
     this.updateStatus();
 
     this.service
@@ -38,11 +39,7 @@ export class PanasonicPlatformAccessory {
   async handleGet(): Promise<CharacteristicValue> {
     return new Promise((resolve) => {
       this.device.getPlayStatus((err, state) => {
-        if (!err && state === 'playing') {
-          resolve(true);
-        } else {
-          resolve(false);
-        }
+        resolve(!err && state === 'playing');
       });
     });
   }
