@@ -4,6 +4,6 @@
 export const PLATFORM_NAME = 'PanaBridge';
 
 /**
- * This must match the name of your plugin as defined the package.json `name` property
+ * This must match the name of your plugin as defined in the package.json `name` property
  */
 export const PLUGIN_NAME = 'homebridge-panasonic-bluray-players';
