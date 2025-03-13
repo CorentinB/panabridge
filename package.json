@@ -3,9 +3,9 @@
   "displayName": "PanaBridge",
   "type": "module",
   "version": "2.0.0",
-  "private": true,
+  "private": false,
   "description": "Get status of Panasonic Blu-ray players",
-  "author": "Your Name",
+  "author": "Corentin Barreau",
   "license": "Apache-2.0",
   "homepage": "https://github.com/CorentinB/panabridge#readme",
   "repository": {
