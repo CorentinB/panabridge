@@ -2,7 +2,7 @@
   "name": "homebridge-panasonic-bluray-players",
   "displayName": "PanaBridge",
   "type": "module",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": false,
   "description": "Get status of Panasonic Blu-ray players",
   "author": "Corentin Barreau",
