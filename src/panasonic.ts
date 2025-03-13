@@ -103,10 +103,10 @@ export class PanasonicBD {
       },
     };
 
-    console.log('HTTP Request Details:');
-    console.log('URL:', url);
-    console.log('Options:', JSON.stringify(options, null, 2));
-    console.log('Data:', data);
+    // console.log('HTTP Request Details:');
+    // console.log('URL:', url);
+    // console.log('Options:', JSON.stringify(options, null, 2));
+    // console.log('Data:', data);
 
     const req = http.request(url, options, (res) => {
       let rawData = '';
