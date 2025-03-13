@@ -214,6 +214,10 @@ export class PanasonicBD {
           return;
         }
         const stateResponse = resp[1];
+        if (stateResponse === null) {
+          callback(null, 'error', 0, 0);
+          return;
+        }
         let state: string;
         if (stateResponse[0] === '0') {
           if ((status as string[])[0] === '0') {
