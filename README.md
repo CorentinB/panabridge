@@ -13,3 +13,7 @@ This plugin allows you to query the play status (playing, paused, standby/stoppe
 
 > **Note:**  
 > For the plugin to work correctly, make sure that **Network Voice Control** is enabled on your Panasonic Blu-ray player.
+
+## Installation
+
+Search for `homebridge-panasonic-bluray-players` in your HomeBridge UI and click install!
