@@ -16,7 +16,10 @@
     "url": "https://github.com/CorentinB/panabridge/issues"
   },
   "keywords": [
-    "homebridge-plugin"
+    "homebridge-plugin",
+    "panasonic",
+    "blu-ray",
+    "player"
   ],
   "main": "dist/index.js",
   "engines": {
