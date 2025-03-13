@@ -54,7 +54,9 @@ export class PanasonicPlatformAccessory {
           );
           this.lastStatus = isPresent;
         }
-        this.platform.log.debug('Panasonic status:', state, playtime, duration);
+        if (this.platform.config.debug) {
+          this.platform.log.debug('Panasonic status:', state, playtime, duration);
+        }
         this.service.updateCharacteristic(
           this.platform.api.hap.Characteristic.OccupancyDetected,
           isPresent,

@@ -22,6 +22,12 @@
         "type": "number",
         "required": false,
         "default": 500
+      },
+      "debug": {
+        "title": "Enable Debug Logging",
+        "type": "boolean",
+        "required": false,
+        "default": false
       }
     }
   }
