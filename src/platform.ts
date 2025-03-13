@@ -30,7 +30,7 @@ export class PanaBridgePlatform implements DynamicPlatformPlugin {
     if (this.config.host) {
       const device = {
         uniqueId: this.config.host, // using the host as a unique ID
-        displayName: 'Panasonic Blu-Ray',
+        displayName: 'Panasonic Blu-ray player',
         host: this.config.host,
       };
 
