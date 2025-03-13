@@ -5,6 +5,7 @@ import { PanasonicBD } from './panasonic.js';
 export class PanasonicPlatformAccessory {
   private service: Service;
   private device: PanasonicBD;
+  private lastStatus: boolean | null = null;
 
   constructor(
     private readonly platform: PanaBridgePlatform,
@@ -47,6 +48,15 @@ export class PanasonicPlatformAccessory {
   updateStatus(): void {
     this.device.getPlayStatus((err, state, playtime, duration) => {
       const isPresent = state === 'playing';
+      if (this.lastStatus !== isPresent) {
+        this.platform.log.info(
+          'Panasonic status changed from',
+          this.lastStatus,
+          'to',
+          isPresent,
+        );
+        this.lastStatus = isPresent;
+      }
       this.platform.log.debug('Panasonic status:', state, playtime, duration);
       this.service.updateCharacteristic(
         this.platform.api.hap.Characteristic.OccupancyDetected,
